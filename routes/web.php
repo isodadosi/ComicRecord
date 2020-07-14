@@ -1,6 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+
+use Illuminate\Http\Request;
+use App\Comic;
+
+Route::get('/','ComicsController@index')->name('index');
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +16,3 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});

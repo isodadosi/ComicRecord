@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    
+                    <!-- @yield('content') -->
                 </div>
             </div>
         </div>

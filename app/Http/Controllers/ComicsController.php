@@ -21,4 +21,11 @@ class ComicsController extends Controller
         Comic::create($content);
         return redirect()->route('index');
     }
+
+    public function edit(Request $request){
+      $comic = Comic::find($request->id);
+    //   return view('edit', ['comic' => $comic]);
+    }
+
+    
 }

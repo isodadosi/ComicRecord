@@ -9,6 +9,7 @@
     @foreach ($comics as $comic)
     <div>
         <span> {{ $comic->content }}</span>
+        {{-- <a href="{{ route('edit', ['id'=>$comic->id])}}" class="text-info">編集</a> --}}
     </div>
     @endforeach
 

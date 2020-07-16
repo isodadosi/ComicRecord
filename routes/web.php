@@ -8,4 +8,8 @@ Route::get('/','ComicsController@index')->name('index');
 
 Route::get('/create' , 'ComicsController@create')->name('create');
 Route::post('/store' , 'ComicsController@store') ->name('store');
-// Route::edit('/edit'  , 'ComicsController@edit')  ->name('edit');
+
+Route::get('/edit'   , 'ComicsController@edit')  ->name('edit');
+Route::post('/update', 'ComicsController@update')->name('update');
+
+Route::get('/delete','ComicsController@delete')->name('delete');

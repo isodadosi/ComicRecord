@@ -24,7 +24,22 @@ class ComicsController extends Controller
 
     public function edit(Request $request){
       $comic = Comic::find($request->id);
-    //   return view('edit', ['comic' => $comic]);
+      return view('edit', ['comic' => $comic]);
+    }
+
+    public function update(Request $request)
+    {
+      $comic = Comic::find($request->id);
+      $content = $request->validate(['content' => 'required|max:500']);
+      $comic->fill($content)->save();
+      return redirect()->route('index');
+    }
+
+    public function delete(Request $request)
+    {
+      $comic = Comic::find($request->id);
+      $comic->delete();
+      return redirect()->route('index');
     }
 
     
